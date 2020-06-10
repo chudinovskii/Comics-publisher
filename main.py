@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 
 def download_pic():
-    url = 'https://xkcd.com/353/info.0.json'
+    url = 'https://xkcd.com/info.0.json'
     resp = requests.get(url)
     resp.raise_for_status()
     decoded_resp = resp.json()
