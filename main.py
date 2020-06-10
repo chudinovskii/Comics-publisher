@@ -83,7 +83,7 @@ def make_wall_post(access_token, vk_group_id, title, media_id, owner_id):
     }
     resp = requests.get(url, params=payload)
     resp.raise_for_status()
-    print(resp.text)
+    return resp.text
 
 
 def main():
