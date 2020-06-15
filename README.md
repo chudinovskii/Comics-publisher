@@ -6,19 +6,23 @@ Publsing random xkcd comics to your VK community wall app
 
 Python3 should be already installed. Then use pip to install dependencies:
 
-`pip install -r requirements.txt`
+```
+pip install -r requirements.txt
+```
 
 ### How to use
 
-First edit .env file
+First edit .env file:
 
 `VK_ACCESS_TOKEN = your_vk_access_token`
 
 `VK_GROUP_ID = your_vk_group_id`
 
-Then
+Then:
 
-`$ main.py`
+```
+$ main.py
+```
 
 
 ### Project Goals
