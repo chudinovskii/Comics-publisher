@@ -9,11 +9,8 @@ def get_current_comics_quantity():
     resp = requests.get(url)
     resp.raise_for_status()
     decoded_resp = resp.json()
-    if 'error' in decoded_resp:
-        raise requests.exceptions.HTTPError(decoded_resp['error'])
-    else:
-        comics_quantity = int(decoded_resp['num'])
-        return comics_quantity
+    comics_quantity = int(decoded_resp['num'])
+    return comics_quantity
 
 
 def get_comics_url_and_title(comics_quantity):
@@ -22,12 +19,9 @@ def get_comics_url_and_title(comics_quantity):
     resp = requests.get(url)
     resp.raise_for_status()
     decoded_resp = resp.json()
-    if 'error' in decoded_resp:
-        raise requests.exceptions.HTTPError(decoded_resp['error'])
-    else:
-        title = decoded_resp['alt']
-        url_for_img = decoded_resp['img']
-        return title, url_for_img, comics_number
+    title = decoded_resp['alt']
+    url_for_img = decoded_resp['img']
+    return title, url_for_img, comics_number
 
 
 def download_pic(url, comics_number):
